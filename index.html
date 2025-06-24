@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valutazione del Rischio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Calcolo del Rischio Aziendale</h1>
+
+  <form action="/calcola" method="post">
+    <label for="probabilita">Probabilità (1-5):</label>
+    <input type="number" id="probabilita" name="probabilita" min="1" max="5" required>
+
+    <label for="danno">Danno (1-5):</label>
+    <input type="number" id="danno" name="danno" min="1" max="5" required>
+
+    <label for="esposizione">Esposizione (1-5):</label>
+    <input type="number" id="esposizione" name="esposizione" min="1" max="5" required>
+
+    <input type="submit" value="Calcola Rischio">
+  </form>
+
+  {% if risultato %}
+  <div class="risultato">
+    <p>Il livello di rischio calcolato è: <strong>{{ risultato }}</strong></p>
+    <p>Interpretazione: <strong>{{ interpretazione }}</strong></p>
+  </div>
+  {% endif %}
+
+  <div class="download-link">
+    <a href="{{ url_for('static', filename='calcolo_rischio_aziendale.pdf') }}" download>
+      📥 Scarica il documento esplicativo sul calcolo del rischio
+    </a>
+  </div>
+
+</body>
+</html>
