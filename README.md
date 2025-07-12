@@ -35,11 +35,33 @@ Per avviare l’applicazione:
 1. Installare Flask:
    ```bash
    pip install flask
-Eseguire il file app.py:
+   
+2. Eseguire il file app.py:
+   ```bash
+   python app.py
 
-bash
-python app.py
-Aprire il browser e collegarsi all’indirizzo:
+3. Aprire il browser e collegarsi all’indirizzo:
 
-cpp
-http://127.0.0.1:5000/
+   ```c++
+   http://127.0.0.1:5000/
+
+
+
+## Struttura dei file
+
+- `app.py`: codice backend e logica del calcolo
+- `index.html`: interfaccia utente
+- `style.css`: definizione dello stile grafico
+- `calcolo_rischio_aziendale.pdf`: documentazione allegata al progetto
+- `README.md`: istruzioni e informazioni sul progetto
+
+## Riferimenti normativi
+
+- D.Lgs. 81/2008 – Testo Unico sulla Sicurezza sul Lavoro
+
+## Autore
+
+Carlo Biroli  
+Matricola: 0312200414  
+Università Telematica Pegaso  
+Corso di Laurea in Informatica per le Aziende Digitali (L-31)
